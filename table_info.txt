@@ -1,0 +1,155 @@
+//User 정보
+CREATE TABLE UserInfo(
+
+	UserIdx INT NOT NULL AUTO_INCREMENT,
+
+	Nickname VARCHAR(45) NOT NULL,
+
+	Email VARCHAR(60) NOT NULL,
+	Passwd VARCHAR(45) NOT NULL,
+	Address VARCHAR(100) NOT NULL,
+
+	Gender CHAR(2) NOT NULL,
+	Age INT NOT NULL,
+    	RegDate TIMESTAMP NOT NULL,
+	constraint FK_AgeRange FOREIGN KEY(Age) REFERENCES AgeRange(AgeIdx),
+	PRIMARY KEY(UserIdx));
+
+
+//Age 정보
+CREATE TABLE AgeRange(
+
+	AgeIdx TINYINT NOT NULL,
+	AgeRange VARCHAR(20) NOT NULL,
+
+	PRIMARY KEY(AgeIdx));
+
+
+//UserSensor 정보
+CREATE TABLE UserSensorInfo(
+
+	US_Idx INT NOT NULL AUTO_INCREMENT,
+	US_COMc FLOAT NOT NULL,
+
+	US_SO2Mc FLOAT NOT NULL,
+
+	US_NO2Mc FLOAT NOT NULL,
+
+	US_TemperatureMc FLOAT NOT NULL,
+
+	US_O3Mc FLOAT NOT NULL,
+
+	US_PM25Mc FLOAT NOT NULL,
+
+	US_PM10Mc FLOAT NOT NULL,
+	US_RegDate TIMESTAMP NOT NULL,
+
+	UserIdx INT NOT NULL,
+	constraint FK_UserInfo FOREIGN KEY(UserIdx) REFERENCES UserInfo(UserIdx) on delete cascade,
+	PRIMARY KEY(US_Idx));
+
+//Real-time Indoor AQI SensorData 저장
+CREATE TABLE RtInAQISensorData(
+
+	RI_AQI_Idx FLOAT NOT NULL AUTO_INCREMENT,
+
+	RI_CO FLOAT NOT NULL,
+
+	RI_SO2 FLOAT NOT NULL,
+
+	RI_NO2 FLOAT NOT NULL,
+
+	RI_Temperature FLOAT NOT NULL,
+
+	RI_O3 FLOAT NOT NULL,
+
+	RI_PM25 FLOAT NOT NULL,
+
+	RI_PM10 FLOAT NOT NULL,
+	RI_InsDate TIMESTAMP NOT NULL,
+	US_Idx INT NOT NULL,
+	constraint FK_UserSensorInfo foreign key(US_Idx) references UserSensorInfo(US_Idx) on delete cascade,
+	PRIMARY KEY(RI_Aqi_Idx));
+
+//Average Indoor AQI SensorData 저장
+CREATE TABLE AvgInAQISensorData(
+
+	AI_AQI_Idx FLOAT NOT NULL AUTO_INCREMENT,
+
+	AI_CO FLOAT NOT NULL,
+
+	AI_SO2 FLOAT NOT NULL,
+
+	AI_NO2 FLOAT NOT NULL,
+
+	AI_Temperature FLOAT NOT NULL,
+
+	AI_O3 FLOAT NOT NULL,
+
+	AI_PM25 FLOAT NOT NULL,
+
+	AI_PM10 FLOAT NOT NULL,
+	AI_InsDate TIMESTAMP NOT NULL,
+	US_Idx INT NOT NULL,
+	constraint FK_UserSensorInfo foreign key(US_Idx) references UserSensorInfo(US_Idx) on delete cascade,
+	PRIMARY KEY(AI_Aqi_Idx));
+
+
+//Real-time HeartSensorData 저장
+CREATE TABLE RtHeartSensorData(
+
+	RH_Idx FLOAT NOT NULL AUTO_INCREMENT,
+
+	RH_HR FLOAT NOT NULL,
+
+	RH_RR FLOAT NOT NULL,
+
+	RH_InsDate TIMESTAMP NOT NULL,
+
+	US_Idx INT NOT NULL,
+	constraint FK_UserSensorInfo foreign key(US_Idx) references UserSensorInfo(US_Idx) on delete cascade,
+	PRIMARY KEY(RH_Idx));
+
+
+//Average HeartSensorData 저장
+CREATE TABLE AvgHeartSensorData(
+
+	AH_Idx FLOAT NOT NULL AUTO_INCREMENT,
+
+	AH_HR FLOAT NOT NULL,
+
+	AH_RR FLOAT NOT NULL,
+
+	AH_InsDate TIMESTAMP NOT NULL,
+
+	US_Idx INT NOT NULL,
+	constraint FK_UserSensorInfo foreign key(US_Idx) references UserSensorInfo(US_Idx) on delete cascade,
+	PRIMARY KEY(AH_Idx));
+
+
+
+//Outdoor Sensor 정보
+CREATE TABLE OutSensorInfo(
+
+	OS_Idx FLOAT NOT NULL AUTO_INCREMENT,
+
+	OS_PM25 FLOAT NOT NULL,
+
+	OS_PM10 FLOAT NOT NULL,
+	OS_InsDate TIMESTAMP NOT NULL,
+	PRIMARY KEY(OS_Idx));
+
+
+//Real-time Outdoor PM SensorData 저장
+CREATE TABLE RtOutPMSensorData(
+
+	RO_Idx FLOAT NOT NULL AUTO_INCREMENT,
+
+	RO_PM25 FLOAT NOT NULL,
+
+	RO_PM10 FLOAT NOT NULL,
+	RO_InsDate TIMESTAMP NOT NULL,
+	OS_Idx INT NOT NULL,
+	constraint FK_OutSensorInfo foreign key(OS_Idx) references OutSensorInfo(OS_Idx) on delete cascade,
+	PRIMARY KEY(RO_Idx));
+
