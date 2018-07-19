@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="324dp"
+                android:layout_height="127dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="IN N OUT Health Care Platform"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Login Page"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/idText"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:hint="E-mail"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <EditText
+                android:id="@+id/PasswordText"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:drawableStart="@drawable/ic_lock_black_24dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Login"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="Auto Login"
+                tools:layout_editor_absoluteX="51dp"
+                tools:layout_editor_absoluteY="436dp"/>
+
+            <TextView
+                android:id="@+id/registerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Sign up"
+                android:textColor="#ff000000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/FindButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:text="Find Password"
+                android:textColor="#ff000000"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

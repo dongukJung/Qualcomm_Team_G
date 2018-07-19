@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Find Password Page"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="User Name"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:id="@+id/idText"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorPrimary"/>
+
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="E-mail"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:id="@+id/emailText"
+                android:drawableStart="@drawable/ic_mail_black_24dp"
+                android:drawableLeft="@drawable/ic_mail_black_24dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"/>
+
+            <EditText
+                android:inputType="textPhonetic"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:id="@+id/PhoneText"
+                android:drawableStart="@drawable/ic_phone_black_24dp"
+                android:drawableLeft="@drawable/ic_phone_black_24dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"/>
+
+            <RadioGroup
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderGroup"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:id="@+id/genderMan"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/genderWoman"
+                    android:layout_weight="1"/>
+            </RadioGroup>
+
+            <Spinner
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ageSpinner"></Spinner>
+
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimaryDark"
+                android:text="Send Verification Code"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/EnterButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
