@@ -28,11 +28,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background = "#c6c2c1"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
             </LinearLayout>
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
+            android:id = "@"
             android:layout_marginTop = "32dp"
             android:layout_marginLeft = "118dp"
             android:layout_width="160dp"
@@ -157,6 +158,11 @@
             android:layout_gravity="top"/>
     </FrameLayout>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/housebackground"/>
 
 
 
