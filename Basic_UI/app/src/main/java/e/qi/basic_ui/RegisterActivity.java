@@ -30,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent registerIntent=new Intent(RegisterActivity.this, e.qi.basic_ui.EnterActivity.class);
                 RegisterActivity.this.startActivity(registerIntent);
+                finish();
             }
         });
     }

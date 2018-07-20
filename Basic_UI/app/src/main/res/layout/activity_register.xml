@@ -117,11 +117,17 @@
                     android:layout_weight="1"/>
             </RadioGroup>
 
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text = "Select Age Division"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textColorHint="#ffffff"/>
             <Spinner
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
                 android:id="@+id/ageSpinner"></Spinner>
 
             <Button
@@ -131,7 +137,8 @@
                 android:textStyle="bold"
                 android:textColor="#ffffff"
                 android:background="@color/colorPrimaryDark"
-                android:text="Send Verification Code"
+                android:textAllCaps="false"
+                android:text="Proceed Sign Up"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
                 android:id="@+id/registerButton"/>

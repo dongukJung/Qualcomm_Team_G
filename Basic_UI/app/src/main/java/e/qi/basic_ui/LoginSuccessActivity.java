@@ -6,18 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class EnterActivity extends AppCompatActivity {
+public class LoginSuccessActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enter);
+        setContentView(R.layout.activity_login_success);
     }
 
-    public void onClick(View view) {
-        Toast.makeText(this, "Verification Success", Toast.LENGTH_SHORT).show();
+    public void onClick_backtosignin(View view) {
         finish();
-        Intent intent = new Intent(this, LoginSuccessActivity.class);
-        startActivity(intent);
     }
 }

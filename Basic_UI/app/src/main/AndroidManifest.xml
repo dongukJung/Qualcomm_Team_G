@@ -16,9 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FindActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".EnterActivity"></activity>
+            <activity android:name=".FindActivity" />
+            <activity android:name=".RegisterActivity" />
+            <activity android:name=".IndoorActivity"/>
+            <activity android:name=".LoginSuccessActivity"/>
+            <activity android:name=".EnterActivity">
+        </activity>
     </application>
 
 </manifest>

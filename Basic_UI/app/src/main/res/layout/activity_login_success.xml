@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EnterActivity">
+    tools:context=".FindActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,21 +33,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <EditText
+
+            <TextView
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
-                android:hint="Verification Code"
-                android:layout_gravity="center"
+                android:text="Congratuation!\n\nYour Sign up was Completed\n"
+                android:textSize = "20dp"
+                android:gravity="center"
                 android:padding="10dp"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:id="@+id/idText"
-                android:drawableStart="@drawable/ic_lock_black_24dp"
-                android:drawableLeft="@drawable/ic_lock_black_24dp"
-                android:layout_marginTop="50dp"
-                android:background="@color/colorPrimary"/>
+                android:id="@+id/PhoneText"
+                android:layout_marginTop="10dp"/>
+
+
 
             <Button
                 android:layout_width="280dp"
@@ -56,11 +56,11 @@
                 android:textStyle="bold"
                 android:textColor="#ffffff"
                 android:background="@color/colorPrimaryDark"
-                android:text="Check Verification"
+                android:text="Move to Sign In Page"
+                android:textAllCaps="false"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-                android:id="@+id/registerButton"
-                android:onClick = "onClick"/>
+                android:onClick="onClick_backtosignin"/>
 
         </LinearLayout>
 
