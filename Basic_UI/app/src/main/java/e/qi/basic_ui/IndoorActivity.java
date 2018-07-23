@@ -1,5 +1,6 @@
 package e.qi.basic_ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,4 +13,7 @@ public class IndoorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indoor);
     }
+
+    public void onClick_menubar(View view) {
+        finish();    }
 }
